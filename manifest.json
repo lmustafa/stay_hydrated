@@ -1,0 +1,20 @@
+{
+	"name": "Water Reminder",
+	"version": "1.0",
+	"description": "Water Reminder",
+	"permissions": ["alarms", "notifications", "storage"],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [{
+		"matches": [
+			"<all_urls>"
+		],
+		"js": ["content.js"]
+	}],
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": "water.png"
+	},
+	"manifest_version": 2
+}
